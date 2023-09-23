@@ -60,7 +60,7 @@ def get_response(user_input):
     return result_data['Sales Agent'].iloc[most_similar_index]
 
 # create greeting and farewel messages list 
-greetings = ["Hey There.... I am a creation of Teelash_K.... How can I help",
+greetings = ["Hey there.... I am a creation of Teelash_K.... How can I help",
             "Hi Human.... How can I help",
             "Good Day .... How can I help", 
             "Hello There... How can I be useful to you today", "Hello! How can I start your week off right?",
