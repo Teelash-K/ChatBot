@@ -1,4 +1,4 @@
-# &pip install nltk 
+# %pip install nltk 
 import nltk
 from nltk.corpus import wordnet
 import streamlit as st
