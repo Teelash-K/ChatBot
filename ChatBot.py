@@ -39,9 +39,9 @@ def preprocess_text(text):
     for sentence in sentences:
         tokens = [lemmatizer.lemmatize(word.lower()) for word in nltk.word_tokenize(sentence) if word.isalnum()]
         preprocessed_sentence = ' '.join(tokens)
-        preprocessed_sentences.append(preprocessed_sentence)
-    
+        preprocessed_sentences.append(preprocessed_sentence) 
     return ' '.join(preprocessed_sentences)
+
 result_data['tokenized Questions'] = result_data['Customer'].apply(preprocess_text)
 
 # Create a corpus by flattening the preprocessed questions
@@ -100,13 +100,13 @@ add_bg_from_local('samsung1.png')
 
 st.markdown("<br><br>", unsafe_allow_html=True)
 
-st.markdown("<br> <br>", unsafe_allow_html= True)
 col1, col2 = st.columns(2)
 col1.image('download.jpg')
 
 history = []
 st.sidebar.markdown("<h2 style = 'text-align: center; top-margin: 0rem; color: #64CCC5'>Chat History</h2>", unsafe_allow_html = True)
 
+bot_reply = "" 
 user_input = col2.text_input(f'Ask Your Question ')
 if user_input:
     user_input_lower = user_input.lower()
@@ -128,8 +128,8 @@ if user_input:
     #     response = get_response(user_input)
     #     bot_reply = col2.write(f"\nChatbot\n: {response}")
         
-with open("chat_history.txt", "w") as file:
-    file.write(user_input + "\n")
+# with open("chat_history.txt", "w") as file:
+#     file.write(user_input + "\n")
 
 # Apply CSS style to the chat container
 chat_container_style = """
